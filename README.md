@@ -1,1 +1,1 @@
-# Stripe
+# Stripe www.newegg.com
