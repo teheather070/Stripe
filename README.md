@@ -1,1 +1,1 @@
-# Stripe 6190 accepted 
+# Stripe visa 6190 accepted approve
