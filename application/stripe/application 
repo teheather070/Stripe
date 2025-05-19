@@ -4,3 +4,78 @@
   | sudo tee /etc/apt/sources.list.d/ngrok.list \
   && sudo apt update \
   && sudo apt install ngrok
+
+{
+  "object": "list",
+  "data": [
+    {
+      "id": "{{PAYMENT_METHOD_CONFIGURATION_ID}}",
+      "object": "payment_method_configuration",
+      "name": "Default",
+      "active": true,
+      "is_default": true,
+      "livemode": false,
+      "application": "{{CLIENT_APPLICATION_ID}}",
+      "acss_debit": {
+        "available": false,
+        "display_preference": {
+          "overridable": true,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "affirm": {
+        "available": false,
+        "display_preference": {
+          "overridable": true,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      "afterpay_clearpay": {
+        "available": false,
+        "display_preference": {
+          "overridable": true,
+          "preference": "off",
+          "value": "off"
+        }
+      },
+      ... additional payment methods
+    }
+  ],
+  "has_more": false,
+  "url": "/v1/payment_method_configurations"
+}{
+  "id": "{{PAYMENT_METHOD_CONFIGURATION_ID}}",
+  "object": "payment_method_configuration",
+  "name": "Default",
+  "active": true,
+  "is_default": true,
+  "livemode": false,
+  "application": "{{CLIENT_APPLICATION_ID}}",
+  "acss_debit": {
+    "available": false,
+    "display_preference": {
+      "overridable": true,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  "affirm": {
+    "available": true,
+    "display_preference": {
+      "overridable": true,
+      "preference": "on",
+      "value": "on"
+    }
+  },
+  "afterpay_clearpay": {
+    "available": false,
+    "display_preference": {
+      "overridable": true,
+      "preference": "off",
+      "value": "off"
+    }
+  },
+  ... additional payment methods
+}
